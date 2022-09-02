@@ -21,10 +21,9 @@ const ShowCites = ({ showCites, deleteOneCites}) => {
                 </div>
                 <div className="card-footer">
                     <button
-                        className='btn btn-danger'
+                        className='btn btn-danger col-12'
                         onClick={()=> deleteOneCites(id)}
                     >delete</button>
-                    <button className='btn btn-warning'>edit</button>
                 </div>
             </div>
 
