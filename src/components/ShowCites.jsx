@@ -6,7 +6,7 @@ const ShowCites = ({ showCites, deleteOneCites}) => {
 
     return (
         <Fragment>
-            <div className="card text-start">
+            <div className="card text-start mt-3">
                 <div className="card-header">
                     <h6>id: {id}</h6>
                 </div>

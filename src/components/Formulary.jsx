@@ -63,7 +63,7 @@ const Formulary = ({getAllCites}) => {
                 onSubmit={submitCites}
             >
 
-                <div className='form-floating mb-5'>
+                <div className='form-floating mb-5 text-white'>
                     <h1>Create cite</h1>
                 </div>
 

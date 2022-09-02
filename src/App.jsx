@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react'
+import { useState, Fragment, useEffect} from 'react'
 import Formulary from './components/Formulary'
 import ShowCites from './components/ShowCites';
 
@@ -8,6 +8,11 @@ function App() {
   //useState
   const [getCites, setAllCites] = useState([]);
 
+  //useEffect
+  useEffect(()=>{
+    console.log("ready");
+  }, [getCites]); 
+
   //get cites
   const getAllCites = cites => setAllCites([...getCites, cites])
 
@@ -16,6 +21,7 @@ function App() {
     setAllCites(getCites.filter(c => c.id !== id))
   };
 
+  const citesTotal = getCites.length <= 0 ? 'NO APPOINTMENTS' : 'ALL CITES'; 
 
   return (
     <Fragment>
@@ -27,6 +33,9 @@ function App() {
             />
           </div>
           <div className="col-12 col-md-6">
+            <div className='col-12 mb-5 text-white'>
+                <h1>{citesTotal}</h1>
+            </div>
             {getCites.map(c => (
               <ShowCites
                 key={c.id}
