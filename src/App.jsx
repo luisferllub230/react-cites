@@ -5,12 +5,22 @@ import ShowCites from './components/ShowCites';
 
 function App() {
 
+  //localStorage
+  let citesStorage = JSON.parse(localStorage.getItem('getCites'));
+
+  !citesStorage? citesStorage = [] : null; 
+
   //useState
-  const [getCites, setAllCites] = useState([]);
+  const [getCites, setAllCites] = useState(citesStorage);
 
   //useEffect
   useEffect(()=>{
-    console.log("ready");
+    console.log('here');
+    if(citesStorage){
+      localStorage.setItem('getCites', JSON.stringify(getCites));
+    }else{
+      localStorage.setItem('getCites', JSON.stringify([]));
+    }
   }, [getCites]); 
 
   //get cites
