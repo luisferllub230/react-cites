@@ -4,7 +4,7 @@
 
 react-cites is a gestor o cites create in react, you can register a pasient an se instantanialy your information.
 
-##### DEMO -> [CLICK HERE](https://prismatic-creponne-897097.netlify.app/ "CLICK HERE")
+##### DEMO -> [CLICK HERE](https://react-cites.netlify.app// "CLICK HERE")
 
 <br><br>
 ## Technologies 
